@@ -1,0 +1,132 @@
+{
+  "updated": "2026-10-05",
+  "statusLabel": "B 背景与 2/3 个独立物件已生成；A 整图对照待生成。",
+  "displayQuality": "150k splats",
+  "a": {
+    "statusLabel": "待生成",
+    "caption": "整图对照还未生成，因此暂不能比较视觉质量。",
+    "splat": null,
+    "objects": []
+  },
+  "b": {
+    "statusLabel": "2/3 个独立物件",
+    "caption": "真实三维背景 + 2 个独立 GLB；位置、比例与朝向由人工编排。",
+    "splat": "scene/b/background.spz",
+    "poster": "media/b-front.jpg",
+    "posters": {
+      "front": "media/b-front.jpg",
+      "side": "media/b-side.jpg",
+      "back": "media/b-back.jpg"
+    },
+    "transform": {
+      "scale": 1.5098902,
+      "ground": 1.2705783,
+      "flipY": true
+    },
+    "objects": [
+      {
+        "id": "chair",
+        "name": "黄色扶手椅",
+        "model": "scene/b/chair.glb",
+        "sound": "media/chair.wav",
+        "height": 1.2,
+        "position": [
+          -0.28,
+          0,
+          -1.3
+        ],
+        "rotationY": 0
+      },
+      {
+        "id": "plant",
+        "name": "灰盆绿植",
+        "model": "scene/b/plant.glb",
+        "sound": "media/plant.wav",
+        "height": 0.37,
+        "position": [
+          0.8,
+          0.95,
+          -2.06
+        ],
+        "rotationY": 0
+      }
+    ]
+  },
+  "objects": [
+    {
+      "id": "chair",
+      "name": "黄色扶手椅",
+      "image": "media/chair.png",
+      "note": "参考图已完成。纽扣数量发生变化，遮挡结构为推测。",
+      "status": "真实 GLB 已导出"
+    },
+    {
+      "id": "lamp",
+      "name": "白色台灯",
+      "image": "media/lamp.png",
+      "note": "参考图已完成。原图遮挡的底座由模型补全。 两次 GLB 导出返回错误；没有使用替代假模型。",
+      "status": "预览成功 / 导出失败"
+    },
+    {
+      "id": "plant",
+      "name": "灰盆绿植",
+      "image": "media/plant.png",
+      "note": "参考图已完成。枝叶细节包含生成推测。",
+      "status": "真实 GLB 已导出"
+    }
+  ],
+  "facts": [
+    [
+      "共同输入",
+      "同一张 1600 × 2400 阅读角照片"
+    ],
+    [
+      "世界模型",
+      "两条路线均使用 Marble 1.1（A 待生成）"
+    ],
+    [
+      "显示精度",
+      "相同 150k splats；共享机位与视场角"
+    ],
+    [
+      "B 图片处理",
+      "内置图像生成工具，4 次调用"
+    ],
+    [
+      "B 背景生成",
+      "5 分 34 秒；1580 credits，折合 $1.264"
+    ],
+    [
+      "独立物件",
+      "TRELLIS.2 免费 Space，2/3 个真实 GLB；512 分辨率，seed 42；免费额度已耗尽"
+    ],
+    [
+      "音效",
+      "4 段本地程序合成，无额外 API 费用"
+    ],
+    [
+      "人工编排",
+      "手动设置比例、朝向与位置；未进行精确空间标定"
+    ],
+    [
+      "费用边界",
+      "未调用 FAL、未充值、未订阅。图片工具未提供计费回执，不能把全流程标为免费。"
+    ]
+  ],
+  "findings": [
+    "干净背景已移除三个指定物件，并补全墙面和地板。",
+    "世界模型在原图视野之外补出了白色沙发、柜子与额外盆栽；这些不是原照片事实。",
+    "A 整图对照尚未运行，不能比较两条路线的视觉质量。B 已实现两件独立物件的可编辑性。",
+    "声音属于程序合成的近似设计，不是照片中的录音；本页面的物件移动不等于物理仿真。",
+    "台灯的三维预览已生成，但 GLB 导出两次失败；随后服务提示今日免费额度已用完。"
+  ],
+  "source": {
+    "author": "Phil Strahl",
+    "url": "https://unsplash.com/photos/yellow-armchair-side-table-with-lamp-and-plant-R6FYseWOwHQ",
+    "license": "https://unsplash.com/license"
+  },
+  "upstream": {
+    "repo": "https://github.com/neilsonnn/image-blaster",
+    "commit": "4acb43ba126a12358f71838d1b1a05e856b10eaf"
+  }
+}
