@@ -4,7 +4,7 @@ async function init(){
 
 const $ = s => document.querySelector(s);
 let viewer;
-const state = await fetch('./experiment.json').then(r => {if(!r.ok)throw new Error('实验数据未能加载');return r.json();}).catch(error => {$('#experiment-status').textContent=error.message;throw error;});
+const state = await fetch('./experiment.json',{cache:'no-store'}).then(r => {if(!r.ok)throw new Error('实验数据未能加载');return r.json();}).catch(error => {$('#experiment-status').textContent=error.message;throw error;});
 $('#experiment-status').textContent=state.statusLabel;
 $('#a-badge').textContent=state.a.statusLabel; $('#b-badge').textContent=state.b.statusLabel;
 $('#poster-b').src=state.b.poster;$('#caption-a').textContent=state.a.caption; $('#caption-b').textContent=state.b.caption;
@@ -35,7 +35,7 @@ $('#start-3d').addEventListener('click',async()=>{
 });
 $('#reset').addEventListener('click',()=>{viewer?.resetObjects();document.querySelector('[data-view="front"]').click();$('#interaction-status').textContent='已回到初始机位与人工设置的物件位置。';});
 $('#show-objects').addEventListener('change',event=>viewer?.showObjects(event.target.checked));
-$('#move-objects').addEventListener('change',event=>{viewer?.setMoveMode(event.target.checked);$('#interaction-help').textContent=event.target.checked?'在右侧拖动物件可改变位置；空白处仍可旋转视角。':'拖动旋转，滚轮拉近；两侧使用相同相机位置。';});
+$('#move-objects').addEventListener('change',event=>{viewer?.setMoveMode(event.target.checked);$('#interaction-help').textContent=event.target.checked?'在 B 侧拖动物件可改变位置；空白处仍可旋转视角。':'拖动旋转，滚轮拉近；两侧使用相同相机位置。';});
 let sound=false;
 const ambience=new Audio('media/room.wav');ambience.loop=true;ambience.volume=.5;ambience.id='ambient-audio';ambience.preload='none';ambience.hidden=true;document.body.append(ambience);
 $('#sound-toggle').addEventListener('click',async()=>{

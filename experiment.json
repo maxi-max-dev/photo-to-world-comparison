@@ -1,11 +1,22 @@
 {
   "updated": "2026-10-05",
-  "statusLabel": "B 背景与 2/3 个独立物件已生成；A 整图对照待生成。",
+  "statusLabel": "A、B 两侧真实三维均可查看；B 的 2/3 个独立物件已完成。",
   "displayQuality": "150k splats",
   "a": {
-    "statusLabel": "待生成",
-    "caption": "整图对照还未生成，因此暂不能比较视觉质量。",
-    "splat": null,
+    "statusLabel": "整图已生成",
+    "caption": "原图直接生成的整体空间。照片中的物件包含在 SPZ 中，不能单独拖动。",
+    "splat": "scene/a/background.spz",
+    "poster": "media/a-front.jpg",
+    "posters": {
+      "front": "media/a-front.jpg",
+      "side": "media/a-side.jpg",
+      "back": "media/a-back.jpg"
+    },
+    "transform": {
+      "scale": 1.3632092,
+      "ground": 1.1728458,
+      "flipY": true
+    },
     "objects": []
   },
   "b": {
@@ -82,11 +93,11 @@
     ],
     [
       "世界模型",
-      "两条路线均使用 Marble 1.1（A 待生成）"
+      "A 与 B 均为 Marble 1.1，每条路线各生成一次"
     ],
     [
       "显示精度",
-      "相同 150k splats；共享机位与视场角"
+      "同为 150k splats，共享数值机位与视场角；未进行像素配准"
     ],
     [
       "B 图片处理",
@@ -95,6 +106,10 @@
     [
       "B 背景生成",
       "5 分 34 秒；1580 credits，折合 $1.264"
+    ],
+    [
+      "A 整图生成",
+      "7 分 35 秒（含下载）；按标准价估算 $1.264，未返回最终账单"
     ],
     [
       "独立物件",
@@ -114,19 +129,26 @@
     ]
   ],
   "findings": [
-    "干净背景已移除三个指定物件，并补全墙面和地板。",
-    "世界模型在原图视野之外补出了白色沙发、柜子与额外盆栽；这些不是原照片事实。",
-    "A 整图对照尚未运行，不能比较两条路线的视觉质量。B 已实现两件独立物件的可编辑性。",
-    "声音属于程序合成的近似设计，不是照片中的录音；本页面的物件移动不等于物理仿真。",
-    "台灯的三维预览已生成，但 GLB 导出两次失败；随后服务提示今日免费额度已用完。"
+    "同一照片的整图结果 A 与拆分组装结果 B 已并排接入；两侧均为 Marble 1.1，使用相同显示精度与同步机位。",
+    "A 保留了带蓝色光照的椅子、台灯与盆栽；B 的独立模型纹理更简化，台灯仍缺失。",
+    "从背侧观察，A 的椅子及周边细节出现明显拉伸与模糊。B 的独立 GLB 轮廓更稳定，也能单独隐藏和移动，但隐藏结构同样是生成推测。",
+    "两侧都扩展了原图没拍到的区域：A 增添座椅、桌灯等，B 增添白色沙发和柜子。它们都不是对真实房间的完整还原。",
+    "这是一组未做精确空间配准的工作流示例，B 还缺一个物件，不能据此认定某种方法普遍更好。声音是程序合成，页面拖动不是物理仿真。"
   ],
   "source": {
     "author": "Phil Strahl",
     "url": "https://unsplash.com/photos/yellow-armchair-side-table-with-lamp-and-plant-R6FYseWOwHQ",
-    "license": "https://unsplash.com/license"
+    "license": "https://unsplash.com/license",
+    "sha256": "f5633ae724f8f37f41ab7041fdb3349a4b956495dba0c45a1019aac9558313c1"
   },
   "upstream": {
     "repo": "https://github.com/neilsonnn/image-blaster",
     "commit": "4acb43ba126a12358f71838d1b1a05e856b10eaf"
+  },
+  "world_comparison_available": true,
+  "b_objects_complete": false,
+  "prompts": {
+    "a": "A quiet indoor reading corner. Preserve the yellow wingback armchair, white slim LED desk lamp, green leafy plant with gray tapered pot, blue-lit dark gray wall, perforated acoustic panel, wall switch, wooden plank floor, dark single-drawer side table and two books as in the input. No people. Extend the room consistently.",
+    "b": "A quiet indoor reading corner. Preserve the blue-lit dark gray wall, perforated acoustic panel, wall switch, wooden plank floor, dark single-drawer side table and two books as in the input. The area in front of the table is empty floor. No armchair, no desk lamp, no potted plant, no people. Extend the room consistently."
   }
 }

@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="同一张阅读角照片，比较整图生成三维空间与 image-blaster 拆分物件后组装的结果。"><title>一张照片，两种三维 · image-blaster 对比</title>  <script type="module" crossorigin src="./assets/index-BCyAl9S1.js"></script>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="同一张阅读角照片，比较整图生成三维空间与 image-blaster 拆分物件后组装的结果。"><title>一张照片，两种三维 · image-blaster 对比</title>  <script type="module" crossorigin src="./assets/index-KIReaKWc.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-NMw2wp3w.css">
 </head>
 <body>
@@ -23,7 +23,7 @@
     <section class="process-section" aria-labelledby="process-title"><div class="section-heading"><div><p class="eyebrow">B 路线 / 拆分过程</p><h2 id="process-title">房间留在背景里，物件单独拿出来。</h2></div></div>
       <div class="process-grid"><figure class="plate"><img src="media/clean-plate.png" alt="移除扶手椅、台灯和盆栽后的干净背景"><figcaption><span class="step-tag">补背景</span><h3>移除三个目标物件</h3><p>补全原先被遮挡的墙面和地板。边桌与书保留。</p></figcaption></figure><div class="object-list" id="object-list"></div></div>
     </section>
-    <section id="method" class="method"><div class="section-heading"><div><p class="eyebrow">如何读这个对比</p><h2>控制相同条件，保留真实差异。</h2></div></div><div class="method-grid"><div class="method-copy"><h3>这次实际比较什么</h3><p>一张照片，两条工作流。A 将整张照片交给世界模型；B 先移除指定物件、补背景，再分别生成物件并人工放回空间。</p><p>两侧沿用同一世界模型与相同显示精度，共用固定机位。B 的移除指令与 A 的保留指令不同，且空间生成带有随机性，因此这是一组工作流示例，不能单凭一组结果判断普遍优劣。</p><p id="limitations">原图没拍到的区域，以及被遮住的物件结构，都包含模型推测。人工调整的位置、朝向和比例会单独记录。</p></div><table><caption>可核对的实验条件</caption><tbody id="facts"></tbody></table></div></section>
+    <section id="method" class="method"><div class="section-heading"><div><p class="eyebrow">如何读这个对比</p><h2>控制相同条件，保留真实差异。</h2></div></div><div class="method-grid"><div class="method-copy"><h3>这次实际比较什么</h3><p>一张照片，两条工作流。A 将整张照片交给世界模型；B 先移除指定物件、补背景，再分别生成物件并人工放回空间。</p><p>两侧沿用同一世界模型与相同显示精度，共用数值机位，未进行像素配准。B 的移除指令与 A 的保留指令不同，且空间生成带有随机性，因此这是一组工作流示例，不能单凭一组结果判断普遍优劣。</p><p id="limitations">原图没拍到的区域，以及被遮住的物件结构，都包含模型推测。人工调整的位置、朝向和比例会单独记录。</p></div><table><caption>可核对的实验条件</caption><tbody id="facts"></tbody></table></div></section>
     <section class="evidence"><div><p class="eyebrow">结果与边界</p><h2>看见什么，就记下什么。</h2></div><ul id="findings"></ul></section>
     <footer id="source"><p>照片：<a href="https://unsplash.com/photos/yellow-armchair-side-table-with-lamp-and-plant-R6FYseWOwHQ">Phil Strahl / Unsplash</a> · <a href="https://unsplash.com/license">Unsplash License</a></p><p>流程源于 <a href="https://github.com/neilsonnn/image-blaster">image-blaster</a>，本次使用无需 FAL 的适配。独立物件由 <a href="https://huggingface.co/spaces/microsoft/TRELLIS.2">TRELLIS.2 官方 Space</a> 生成。三维显示：Three.js + Spark。</p><p><a href="experiment.json">查看实验数据</a> · <a href="THIRD-PARTY-NOTICES.txt">许可说明</a> <span id="updated"></span></p></footer>
   </main>

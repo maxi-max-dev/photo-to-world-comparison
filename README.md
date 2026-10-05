@@ -1,13 +1,13 @@
 # One photo, two 3D workflows
 
-A transparent, in-progress comparison using one credited reading-nook photo.
+Two real 3D results generated from the same credited reading-nook photo, shown with synchronized cameras.
 
-- **A — direct world:** prepared, not generated. No visual A/B conclusion is claimed.
+- **A — direct world:** one real Marble 1.1 generation from the unedited original image, with objects integrated into the world.
 - **B — split and assemble:** a real Marble 1.1 background, two real TRELLIS.2 GLBs (chair and plant), manual placement, and procedural sound.
 - The lamp preview succeeded but two GLB exports failed. The free Space later reported its daily quota exhausted.
-- No FAL request, top-up, or subscription was made. The background used 1580 World Labs credits. Image-tool billing was not exposed.
+- No FAL request, top-up, or subscription was made. B consumed 1580 credits. A used the same model, priced at 1580 credits ($1.264 estimate); the API returned no final billing item. Image-tool billing was not exposed.
 
-The viewer supports fixed viewpoints, orbit/zoom, object visibility, horizontal dragging, reset, and opt-in sound. Dragging is not physics simulation. The collision mesh is included as an artifact, but this public viewer does not use it for physics.
+The viewer supports fixed viewpoints, orbit/zoom, object visibility, horizontal dragging, reset, and opt-in sound. Dragging is not physics simulation. The collision meshes are included as artifacts, but this public viewer does not use it for physics.
 
 ## Rebuild
 

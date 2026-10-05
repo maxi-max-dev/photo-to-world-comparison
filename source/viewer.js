@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { SplatMesh, SparkRenderer } from '@sparkjsdev/spark';
 
-const presets={front:{position:[0,1.45,1.6],target:[.15,.75,-2.4]},side:{position:[-.95,1.25,.35],target:[.25,.65,-1.7]},back:{position:[.8,1.75,-2.02],target:[-.28,.7,-1.2]}};
+const presets={front:{position:[0,1.35,.75],target:[.05,.65,-1.55]},side:{position:[-.95,1.25,.35],target:[.25,.65,-1.7]},back:{position:[.8,1.75,-2.02],target:[-.28,.7,-1.2]}};
 
 export async function createViewer(data){
   const panes=[],objects=[],raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();let syncing=false,moveMode=false,sound=false;
