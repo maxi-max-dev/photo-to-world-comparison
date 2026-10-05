@@ -17,7 +17,8 @@
       "ground": 1.1728458,
       "flipY": true
     },
-    "objects": []
+    "objects": [],
+    "collision": "scene/a/collision.glb"
   },
   "b": {
     "statusLabel": "2/3 个独立物件",
@@ -61,7 +62,8 @@
         ],
         "rotationY": 0
       }
-    ]
+    ],
+    "collision": "scene/b/collision.glb"
   },
   "objects": [
     {
@@ -126,6 +128,10 @@
     [
       "费用边界",
       "未调用 FAL、未充值、未订阅。图片工具未提供计费回执，不能把全流程标为免费。"
+    ],
+    [
+      "空间浏览",
+      "进入后可前后左右行走、转头；A/B 切换保留数值机位。使用生成的碰撞网格，固定视高；不含重力仿真。"
     ]
   ],
   "findings": [
@@ -150,5 +156,13 @@
   "prompts": {
     "a": "A quiet indoor reading corner. Preserve the yellow wingback armchair, white slim LED desk lamp, green leafy plant with gray tapered pot, blue-lit dark gray wall, perforated acoustic panel, wall switch, wooden plank floor, dark single-drawer side table and two books as in the input. No people. Extend the room consistently.",
     "b": "A quiet indoor reading corner. Preserve the blue-lit dark gray wall, perforated acoustic panel, wall switch, wooden plank floor, dark single-drawer side table and two books as in the input. The area in front of the table is empty floor. No armchair, no desk lamp, no potted plant, no people. Extend the room consistently."
+  },
+  "navigation": {
+    "mode": "first-person",
+    "controls": "WASD or arrow keys; drag to look; on-screen movement buttons",
+    "collision": "generated world mesh and bounds; conservative boxes for independent objects",
+    "eyeHeight": 1.35,
+    "speedMetersPerSecond": 0.85,
+    "limitations": "Fixed walking height; generated geometry may contain holes; no gravity or rigid-body simulation."
   }
 }

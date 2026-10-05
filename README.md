@@ -7,7 +7,7 @@ Two real 3D results generated from the same credited reading-nook photo, shown w
 - The lamp preview succeeded but two GLB exports failed. The free Space later reported its daily quota exhausted.
 - No FAL request, top-up, or subscription was made. B consumed 1580 credits. A used the same model, priced at 1580 credits ($1.264 estimate); the API returned no final billing item. Image-tool billing was not exposed.
 
-The viewer supports fixed viewpoints, orbit/zoom, object visibility, horizontal dragging, reset, and opt-in sound. Dragging is not physics simulation. The collision meshes are included as artifacts, but this public viewer does not use it for physics.
+The viewer loads real SPZ scenes when the comparison is visible. Enter A or B for first-person walking: WASD/arrows move, drag to look, Q/E turn; on-screen buttons support tapping and holding. Switching A/B preserves the numerical camera pose. Escape exits; reset returns to the entrance. Generated collision meshes and conservative independent-object bounds constrain walking at fixed eye height; this is not a gravity or rigid-body simulation, and generated geometry can have gaps. The comparison still supports orbit/zoom, fixed views, object visibility, horizontal object dragging, and opt-in sound.
 
 ## Rebuild
 
